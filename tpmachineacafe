@@ -1,12 +1,12 @@
 const int ledPins[] = {13, 12, 11};
-const int boutonPins[] = {2, 3, 4};
+const int boutonPins[] = {4, 3, 2};
 int nboissons [] = {10, 10, 10};
-int CheckLumiere;
 String commandes[] = {"cafe", "chocolat", "the"};
 
 
 void setup() {
   Serial.begin(9600); 
+  digitalWrite(ledPins[i], LOW);
   
 for(int i = 0; i < 3; i++){
     pinMode(boutonPins[i], INPUT_PULLUP); 
@@ -15,19 +15,19 @@ for(int i = 0; i < 3; i++){
   }
 }
 
+void checkLumiere(int type_boisson) 
 
-loop Checklumiere
-  // pour les boutons
-pinMode(2, INPUT); // initialise le pin numéro 2 comme étant un input
-digitalWrite(2, HIGH); // met le pin 2 en état haut
-// pour les leds
-pinMode(13, OUTPUT); // initialise le pin numéro 13 comme étant un output
-digitalWrite(13, HIGH); // met le pin 13 en état haut
+void loop(){
+  digitalRead(ledPins[i], LOW);
 
 
+
+
+  
+}
 void remplir(int type_boisson){
   nboissons[type_boisson] = 10;
-  checkLumiere(int type_boisson);
+  checkLumiere (type_boisson);
 }
 
 void receptionCommande() {
@@ -54,4 +54,3 @@ void receptionCommande() {
     }
   }
 }
-
